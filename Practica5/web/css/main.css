@@ -1,0 +1,239 @@
+body{
+	font-family: 'Verdana',Geneva, sans-serif;
+}
+img{
+	max-width: 100%; 
+}
+* {
+	margin:0px;
+	padding:0px;
+}
+ul, ol {
+	list-style:none;
+}
+
+.nav > li {
+	float:left;
+}
+
+.nav li a {
+	background-color:#3A4F63;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+}
+			
+.nav li a:hover {
+	background-color:#434343;
+}
+			
+.nav li ul {
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+			
+.nav li:hover > ul {
+	display:block;
+}
+			
+.nav li ul li {
+	position:relative;
+}
+			
+.nav li ul li ul {
+	right:-140px;
+	top:0px;
+}
+
+/*Pestañas*/
+.tabs { /* es el rectángulo contenedor */
+margin: 0 auto;
+min-height: 500px;/*altura minima */
+position: relative;
+}
+.tab { /* cada una de las pestañas */
+float: left;
+}
+.tab label { /* la parte superior con el título de la pestaña */
+background-color: #3A4F63;
+box-shadow: -3px 3px 2px #678 inset;
+color: white;
+cursor: pointer;/*cambia el cursor al hover*/
+left: 0;
+margin-right: 2px;
+padding: 2px 12px;
+position: relative;
+text-shadow: 1px 1px #000;
+}
+
+
+/* el control input sólo lo necesitamos para que las pestañas
+permanezcan abiertas así que lo ocultamos */
+.tab [type=radio] { display: none; }
+/* el contenido de las pestañas */
+.content {
+background-color: #979797;
+bottom: 0;
+left: 0;
+overflow: hidden;
+padding: 20px;/*espacio*/
+position: absolute;
+right: 0;
+top: 23px;
+}
+
+/* y un poco de animación */
+.content > * {
+opacity: 0;
+-moz-transform: translateX(-100%);
+-webkit-transform: translateX(-100%);
+-o-transform: translateX(-100%);
+
+-moz-transition: all 0.6s ease;
+-webkit-transition: all 0.6s ease;
+-o-transition: all 0.6s ease;
+}
+
+/* controlamos la pestaña activa */
+[type="radio"]:checked ~ label {
+background-color: #979797;
+box-shadow: 0 3px 2px #89A inset;
+color: #FFF;
+z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content { z-index: 1; }
+[type=radio]:checked ~ label ~ .content > * {
+opacity: 1;
+-moz-transform: translateX(0);
+-webkit-transform: translateX(0);
+-o-transform: translateX(0);
+-ms-transform: translateX(0);
+}
+.format{
+	background-color:#3A4F63;
+}
+.quitar-float{
+	float: none;
+}
+.espacio-arriba{
+	margin-top: 20px;
+}
+.espacio-abajo{
+	margin-top: 5px;
+}
+.espacio-derecha{
+	margin-right: 1em;
+}
+.espacio-izq{
+	margin-left: -2em;
+}
+.negrita{
+    font-weight: bold;
+}
+.grande{
+	font-size: 3em;
+}
+.mediano{
+	font-size: 1.5em;
+}
+.verde{
+	color: #395042;
+}
+.azul{
+	color: #0040A5;
+}
+.blanco{
+	color:white;
+}
+.dark-red{
+	color: #380A01;
+}
+.gris{
+	color: #A69180;
+}
+.fondo-gris{
+	background-color: #3A4F63;
+}
+.fondo-azul{
+	background-color:#0040A5;
+}
+.dark-blue{
+	color: #3D365E;
+}
+.fondo-ama{
+	background-color: #CDA329;
+}
+.crema{
+	color: #CDA329;
+}
+.marron{
+	color:#954802;
+}
+.padding-largo{
+	padding: 5px 10px;
+}
+.no-lista {
+	margin:0px;
+	padding: 0px;
+}
+.no-lista li{
+	list-style-type: none;
+}
+.inline-block{
+	float: none;
+	display: inline-block;
+	margin-right: -4px;
+}	
+.inline-block2{
+	float: none;
+	display: inline-block;
+	margin-right: -5px;
+	text-align: center;
+}
+dark-red,.rojo{
+	color: #380A01;
+}
+.centrar{
+	float:center;
+}
+.vete-arriba{
+	vertical-align: top;
+}
+.vete-abajo{
+	vertical-align: bottom;
+}
+.vete-derecha{
+	float:right;
+}
+.vete-izq{
+	float:left;
+}
+.borde{
+    border-color: #CDA329;
+    border-width: 2.5px;
+    border-style: solid;
+}
+#tableWrapper tbody{
+  color:#00467f;
+  font-weight:500;
+  position:absolute;
+  overflow-y: auto;
+  overflow-x: scroll;
+  height:300px;
+  width:300px;
+}
+input:disabled{
+	color:black;
+	background-color:gray;
+
+}
+#tableWrapper #tableContainer{
+  width: 1100px;
+  overflow: hidden;
+}
+
+#tableWrapper tbody>tr{
+  width: 1200px;
+}
